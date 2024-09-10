@@ -1,3 +1,4 @@
+alert('Этот сайт использует файлы Cookie. Если вы зайдёте на этот сайт ещё раз, ваш клики сохранятся, но улучшения нет, мы работаем над этим');
 function getCookie(name) {
   let matches = document.cookie.match(new RegExp(
     "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
@@ -477,4 +478,3 @@ function OnClick92(){
     document.getElementById('kas').innerHTML = Sum(kas);
   }
 }
-alert('Этот сайт использует файлы Cookie. Если вы зайдёте на этот сайт ещё раз, ваш клики сохранятся, но улучшения нет, мы работаем над этим');
