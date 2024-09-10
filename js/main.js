@@ -7,6 +7,7 @@ function getCookie(name) {
 
 if (getCookie('name') != undefined){
   var a = Number(getCookie('name'));
+  document.getElementById('p').innerHTML = getCookie('name');
 }else {
   var a = 0;
 }
@@ -476,4 +477,4 @@ function OnClick92(){
     document.getElementById('kas').innerHTML = Sum(kas);
   }
 }
-// alert('Этот сайт использует файлы Cookie. Если вы зайдёте на этот сайт ещё раз, ваш прогресс сохранится');
+alert('Этот сайт использует файлы Cookie. Если вы зайдёте на этот сайт ещё раз, ваш клики сохранятся, но улучшения нет, мы работаем над этим');
