@@ -11,13 +11,13 @@ if (getCookie('name') != undefined){
   var a = 0;
 }
 if (getCookie('kas') != undefined){
-  var kas = [Number(getCookie('kas').split(' ')[0]), getCookie('kas').split(' ')[1]), getCookie('kas').split(' ')[2]), getCookie('kas').split(' ')[3]), getCookie('kas').split(' ')[4]), getCookie('kas').split(' ')[5]), getCookie('kas').split(' ')[6]), getCookie('kas').split(' ')[7]), getCookie('kas').split(' ')[8])];
+  var kas = [Number(getCookie('kas').split(' ')[0]), Number(getCookie('kas').split(' ')[1]), Number(getCookie('kas').split(' ')[2]), Number(getCookie('kas').split(' ')[3]), Number(getCookie('kas').split(' ')[4]), Number(getCookie('kas').split(' ')[5]), Number(getCookie('kas').split(' ')[6]), Number(getCookie('kas').split(' ')[7]), Number(getCookie('kas').split(' ')[8])];
   document.getElementById('p').innerHTML = getCookie('kas');
 }else {
   var kas = [0, 0, 0, 0, 0, 0, 0, 0, 0];
 }
 if (getCookie('up') != undefined){
-  var up = [Number(getCookie('up').split(' ')[0]), getCookie('up').split(' ')[1]), getCookie('up').split(' ')[2]), getCookie('up').split(' ')[3]), getCookie('up').split(' ')[4]), getCookie('up').split(' ')[5]), getCookie('up').split(' ')[6]), getCookie('up').split(' ')[7]), getCookie('up').split(' ')[8])];
+  var up = [Number(getCookie('up').split(' ')[0]), getCookie('up').split(' ')[1]), Number(getCookie('up').split(' ')[2]), Number(getCookie('up').split(' ')[3]), Number(getCookie('up').split(' ')[4]), Number(getCookie('up').split(' ')[5]), Number(getCookie('up').split(' ')[6]), Number(getCookie('up').split(' ')[7]), Number(getCookie('up').split(' ')[8])];
   document.getElementById('p').innerHTML = getCookie('up');
 }else {
   var up = [0, 0, 0, 0, 0, 0, 0, 0, 0];
