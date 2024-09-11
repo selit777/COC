@@ -1,20 +1,31 @@
-alert('Этот сайт использует файлы Cookie. Если вы зайдёте на этот сайт ещё раз, ваш клики сохранятся, но улучшения нет, мы работаем над этим');
 function getCookie(name) {
   let matches = document.cookie.match(new RegExp(
     "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
   ));
   return matches ? decodeURIComponent(matches[1]) : undefined;
 }
-
 if (getCookie('name') != undefined){
   var a = Number(getCookie('name'));
   document.getElementById('p').innerHTML = getCookie('name');
 }else {
   var a = 0;
 }
-
+if (getCookie('kas') != undefined){
+  var kas = [Number(getCookie('kas').split(' ')[0]), getCookie('kas').split(' ')[1]), getCookie('kas').split(' ')[2]), getCookie('kas').split(' ')[3]), getCookie('kas').split(' ')[4]), getCookie('kas').split(' ')[5]), getCookie('kas').split(' ')[6]), getCookie('kas').split(' ')[7]), getCookie('kas').split(' ')[8])];
+  document.getElementById('p').innerHTML = getCookie('kas');
+}else {
+  var kas = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+}
+if (getCookie('up') != undefined){
+  var up = [Number(getCookie('up').split(' ')[0]), getCookie('up').split(' ')[1]), getCookie('up').split(' ')[2]), getCookie('up').split(' ')[3]), getCookie('up').split(' ')[4]), getCookie('up').split(' ')[5]), getCookie('up').split(' ')[6]), getCookie('up').split(' ')[7]), getCookie('up').split(' ')[8])];
+  document.getElementById('p').innerHTML = getCookie('up');
+}else {
+  var up = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+}
 function Sum(kas) {
-    return String(kas.reduce(function(a, b){return a + b;}, 0).toFixed(1))+" K/C";
+  document.cookie = "kas="+kas[0]+" "+kas[1]+" "+kas[2]+" "+kas[3]+" "+kas[4]+" "+kas[5]+" "+kas[6]+" "+kas[7]+" "+kas[8];
+  document.cookie = "up="+up[0]+" "+up[1]+" "+up[2]+" "+up[3]+" "+up[4]+" "+up[5]+" "+up[6]+" "+up[7]+" "+up[8]+" ";
+  return String(kas.reduce(function(a, b){return a + b;}, 0).toFixed(1))+" K/C";
 }
 
 var ccur = 10;
@@ -48,7 +59,6 @@ var endgame = 1000000000;
 
 var pu = [1, 1, 1, 1, 1, 1, 1, 1, 1];
 
-var kas = [0, 0, 0, 0, 0, 0, 0, 0, 0];
 var i = [0, 0, 1, 1, 1, 2, 2, 2, 2, 0];
 var j = [0, 0, 0, 0, 0, 1, 1, 1, 1];
 var k = [1000, 1000, 1000000, 1000000, 1000000, 1000000000, 1000000000, 1000000000, 1000000000];
@@ -56,7 +66,6 @@ var p = [1000, 1000, 1000, 1000, 1000, 1000000, 1000000, 1000000, 1000000];
 var arr = ['','k','m','b','t','q'];
 var ar = ['k', 'm', 'b', 't', 'q'];
 var cen = [1, 5, 10, 50, 100, 1, 5, 10, 50];
-var up = [1, 1, 1, 1, 1, 1, 1, 1, 1];
 var col = [0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 var inter1 = undefined;
@@ -478,3 +487,4 @@ function OnClick92(){
     document.getElementById('kas').innerHTML = Sum(kas);
   }
 }
+alert('Этот сайт использует файлы Cookie. Если вы зайдёте на этот сайт ещё раз, ваш прогресс сохранится');
