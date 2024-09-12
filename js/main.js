@@ -12,13 +12,12 @@ if (getCookie('name') != undefined){
 }
 if (getCookie('kas') != undefined){
   var kas = [Number(getCookie('kas').split(' ')[0]), Number(getCookie('kas').split(' ')[1]), Number(getCookie('kas').split(' ')[2]), Number(getCookie('kas').split(' ')[3]), Number(getCookie('kas').split(' ')[4]), Number(getCookie('kas').split(' ')[5]), Number(getCookie('kas').split(' ')[6]), Number(getCookie('kas').split(' ')[7]), Number(getCookie('kas').split(' ')[8])];
-  document.getElementById('p').innerHTML = getCookie('kas');
+  document.getElementById('kas').innerHTML = getCookie('kas');
 }else {
   var kas = [0, 0, 0, 0, 0, 0, 0, 0, 0];
 }
 if (getCookie('up') != undefined){
   var up = [Number(getCookie('up').split(' ')[0]), Number(getCookie('up').split(' ')[1]), Number(getCookie('up').split(' ')[2]), Number(getCookie('up').split(' ')[3]), Number(getCookie('up').split(' ')[4]), Number(getCookie('up').split(' ')[5]), Number(getCookie('up').split(' ')[6]), Number(getCookie('up').split(' ')[7]), Number(getCookie('up').split(' ')[8])];
-  document.getElementById('p').innerHTML = getCookie('up');
 }else {
   var up = [1, 1, 1, 1, 1, 1, 1, 1, 1];
 }
