@@ -19,7 +19,7 @@ if (getCookie('kas') != undefined){
 if (getCookie('up') != undefined){
   var up = [Number(getCookie('up').split(' ')[0]), Number(getCookie('up').split(' ')[1]), Number(getCookie('up').split(' ')[2]), Number(getCookie('up').split(' ')[3]), Number(getCookie('up').split(' ')[4]), Number(getCookie('up').split(' ')[5]), Number(getCookie('up').split(' ')[6]), Number(getCookie('up').split(' ')[7]), Number(getCookie('up').split(' ')[8])];
 }else {
-  var up = [1, 1, 1, 1, 1, 1, 1, 1, 1];
+  var up  = [1, 1, 1, 1, 1, 1, 1, 1, 1];
 }
 function Sum(kas) {
   document.cookie = "kas="+kas[0]+" "+kas[1]+" "+kas[2]+" "+kas[3]+" "+kas[4]+" "+kas[5]+" "+kas[6]+" "+kas[7]+" "+kas[8];
