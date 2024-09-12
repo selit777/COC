@@ -12,7 +12,7 @@ if (getCookie('name') != undefined){
 }
 if (getCookie('kas') != undefined){
   var kas = [Number(getCookie('kas').split(' ')[0]), Number(getCookie('kas').split(' ')[1]), Number(getCookie('kas').split(' ')[2]), Number(getCookie('kas').split(' ')[3]), Number(getCookie('kas').split(' ')[4]), Number(getCookie('kas').split(' ')[5]), Number(getCookie('kas').split(' ')[6]), Number(getCookie('kas').split(' ')[7]), Number(getCookie('kas').split(' ')[8])];
-  document.getElementById('kas').innerHTML = getCookie('kas');
+  
 }else {
   var kas = [0, 0, 0, 0, 0, 0, 0, 0, 0];
 }
@@ -26,6 +26,8 @@ function Sum(kas) {
   document.cookie = "up="+up[0]+" "+up[1]+" "+up[2]+" "+up[3]+" "+up[4]+" "+up[5]+" "+up[6]+" "+up[7]+" "+up[8]+" ";
   return String(kas.reduce(function(a, b){return a + b;}, 0).toFixed(1))+" K/C";
 }
+
+document.getElementById('kas').innerHTML = Sum(kas);
 
 var ccur = 10;
 var cur = 0;
