@@ -100,6 +100,7 @@ if (getCookie('cen2') != undefined){
   document.getElementById('2copri').innerHTML = cen[8];
 }else {
   var cen  = [1, 5, 10, 50, 100, 1, 5, 10, 50];
+}
 function Sum(kas) {
   document.cookie = "kas="+kas[0]+" "+kas[1]+" "+kas[2]+" "+kas[3]+" "+kas[4]+" "+kas[5]+" "+kas[6]+" "+kas[7]+" "+kas[8];
   document.cookie = "up="+up[0]+" "+up[1]+" "+up[2]+" "+up[3]+" "+up[4]+" "+up[5]+" "+up[6]+" "+up[7]+" "+up[8];
