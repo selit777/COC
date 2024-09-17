@@ -31,15 +31,25 @@ if (getCookie('kol') != undefined){
   var ocur = Number(getCookie('kol').split(' ')[6]);
   var obab = Number(getCookie('kol').split(' ')[7]);
   var opri = Number(getCookie('kol').split(' ')[8]);
-  var inter1 = setInterval(plusp, 10000, 1 * up[1] * cur);
-  var inter2 = setInterval(plusp, 1000,  1 * up[1] * bab);
-  var inter3 = setInterval(plusp, 1000,  10 * up[1] * pri);
-  var inter4 = setInterval(plusp, 1000,  100 * up[1] * bcur);
-  var inter5 = setInterval(plusp, 1000,  1000 * up[1] * bbab);
-  var inter6 = setInterval(plusp, 1000,  10000 * up[1] * bpri);
-  var inter7 = setInterval(plusp, 1000,  100000 * up[1] * ocur);
-  var inter8 = setInterval(plusp, 1000,  1000000 * up[1] * obab);
-  var inter9 = setInterval(plusp, 1000,  10000000 * up[1] * opri);
+  var inter9 = [setInterval(plusp, 1000, 10000000 * up[1] * cur)];
+  var inter2 = [setInterval(plusp, 1000,  1 * up[2] * bab)];
+  var inter3 = [setInterval(plusp, 1000,  10 * up[3] * pri)];
+  var inter4 = [setInterval(plusp, 1000,  100 * up[4] * bcur)];
+  var inter5 = [setInterval(plusp, 1000,  1000 * up[5] * bbab)];
+  var inter6 = [setInterval(plusp, 1000,  10000 * up[6] * bpri)];
+  var inter7 = [setInterval(plusp, 1000,  100000 * up[7] * ocur)];
+  var inter8 = [setInterval(plusp, 1000,  1000000 * up[8] * obab)];
+  var inter1 = [setInterval(plusp, 10000,  1 * up[0] * opri)];
+  document.getElementByID('cur' ).title = cur ;
+  document.getElementByID('bab' ).title = bab ;
+  document.getElementByID('pri' ).title = pri ;
+  document.getElementByID('bcur').title = bcur;
+  document.getElementByID('bbab').title = bbab;
+  document.getElementByID('bpri').title = bpri;
+  document.getElementByID('ocur').title = ocur;
+  document.getElementByID('obab').title = obab;
+  document.getElementByID('opri').title = opri;
+  
 }else {
   var cur  = 0;
   var bab  = 0;
@@ -50,6 +60,15 @@ if (getCookie('kol') != undefined){
   var ocur = 0;
   var obab = 0;
   var opri = 0;
+  var inter1 = [undefined];
+  var inter2 = [undefined];
+  var inter3 = [undefined];
+  var inter4 = [undefined];
+  var inter5 = [undefined];
+  var inter6 = [undefined];
+  var inter7 = [undefined];
+  var inter8 = [undefined];
+  var inter9 = [undefined];
 }
 if (getCookie('cen') != undefined){
   var ccur  = Number(getCookie('cen').split(' ')[0]);
@@ -83,7 +102,15 @@ if (getCookie('cen') != undefined){
 }
 if (getCookie('kol2') != undefined){
   var col = [Number(getCookie('kol2').split(' ')[0]), Number(getCookie('kol2').split(' ')[1]), Number(getCookie('kol2').split(' ')[2]), Number(getCookie('kol2').split(' ')[3]), Number(getCookie('kol2').split(' ')[4]), Number(getCookie('kol2').split(' ')[5]), Number(getCookie('kol2').split(' ')[6]), Number(getCookie('kol2').split(' ')[7]), Number(getCookie('kol2').split(' ')[8])];
-  
+  document.getElementByID('2cur' ).title = col[0];
+  document.getElementByID('2bab' ).title = col[1];
+  document.getElementByID('2pri' ).title = col[2];
+  document.getElementByID('2bcur').title = col[3];
+  document.getElementByID('2bbab').title = col[4];
+  document.getElementByID('2bpri').title = col[5];
+  document.getElementByID('2ocur').title = col[6];
+  document.getElementByID('2obab').title = col[7];
+  document.getElementByID('2opri').title = col[8];
 }else {
   var col  = [0, 0, 0, 0, 0, 0, 0, 0, 0];
 }
@@ -122,25 +149,6 @@ var p = [1000, 1000, 1000, 1000, 1000, 1000000, 1000000, 1000000, 1000000];
 var arr = ['','k','m','b','t','q'];
 var ar = ['k', 'm', 'b', 't', 'q'];
 
-var inter1 = [undefined];
-  var id1 = 0;
-var inter2 = [undefined];
-  var id2 = 0;
-var inter3 = [undefined];
-  var id3 = 0;
-var inter4 = [undefined];
-  var id4 = 0;
-var inter5 = [undefined];
-  var id5 = 0;
-var inter6 = [undefined];
-  var id6 = 0;
-var inter7 = [undefined];
-  var id7 = 0;
-var inter8 = [undefined];
-  var id8 = 0;
-var inter9 = [undefined];
-  var id9 = 0;
-
 function OnClick(){
   a += 1;
   document.cookie = "name="+String(a);
@@ -169,7 +177,7 @@ function OnClick1(){
     kas[0] += 0.1;
     document.getElementById('p').innerHTML = Math.round(a);
     document.cookie = "name="+String(a);
-    inter1[id1++] = setInterval(plusp, 10000, 1 * up[0]);
+    inter1.pop(setInterval(plusp, 10000, 1 * up[0]));
     console.log(inter1);
     ccur = ccur * 1.2;
     if (ccur >= 1000){
@@ -193,7 +201,7 @@ function OnClick2(){
     kas[1] += 1;
     document.getElementById('p').innerHTML = Math.round(a);
     document.cookie = "name="+String(a);
-    inter2[id2++] = setInterval(plusp, 1000, 1 * up[1]);
+    inter2.pop(setInterval(plusp, 1000, 1 * up[1]));
     cbab = cbab * 1.2;
     if (cbab >= 1000){
       i[1] += 1;
@@ -216,7 +224,7 @@ function OnClick3(){
     kas[2] += 10;
     document.getElementById('p').innerHTML = Math.round(a);
     document.cookie = "name="+String(a);
-    inter3[id3++] = setInterval(plusp, 1000, 10 * up[2]);
+    inter3.pop(setInterval(plusp, 1000, 10 * up[2]));
     cpri = cpri * 1.2;
     if (cpri >= 1000){
       i[2] += 1;
@@ -236,7 +244,7 @@ function OnClick4(){
     kas[3] += 100;
     document.getElementById('p').innerHTML = Math.round(a);
     document.cookie = "name="+String(a);
-    inter4[id4++] = setInterval(plusp, 1000, 100 * up[3]);
+    inter4.pop(setInterval(plusp, 1000, 100 * up[3]));
     cbcur = cbcur * 1.2;
     if (cbcur >= 1000){
       i[3] += 1;
@@ -255,7 +263,7 @@ function OnClick5(){
     kas[4] += 1000;
     document.getElementById('p').innerHTML = Math.round(a);
     document.cookie = "name="+String(a);
-    inter5[id5++] = setInterval(plusp, 1000, 1000 * up[4]);
+    inter5.pop(setInterval(plusp, 1000, 1000 * up[4]));
     cbbab = cbbab * 1.2;
     if (cbbab >= 1000){
       i[4] += 1;
@@ -274,7 +282,7 @@ function OnClick6(){
     kas[5] += 10000;
     document.getElementById('p').innerHTML = Math.round(a);
     document.cookie = "name="+String(a);
-    inter6[id6++] = setInterval(plusp, 1000, 10000 * up[5]);
+    inter6.pop(setInterval(plusp, 1000, 10000 * up[5]));
     cbpri = cbpri * 1.2;
     if (cbpri >= 1000){
       i[5] += 1;
@@ -294,7 +302,7 @@ function OnClick7(){
     kas[6] += 100000;
     document.getElementById('p').innerHTML = Math.round(a);
     document.cookie = "name="+String(a);
-    inter7[id7++] = setInterval(plusp, 1000, 100000 * up[6]);
+    inter7.pop(setInterval(plusp, 1000, 100000 * up[6]));
     cocur = cocur * 1.2;
     if (cocur >= 1000){
       i[6] += 1;
@@ -313,7 +321,7 @@ function OnClick8(){
     kas[7] += 1000000;
     document.getElementById('p').innerHTML = Math.round(a);
     document.cookie = "name="+String(a);
-    inter8[id8++] = setInterval(plusp, 1000, 1000000 * up[7]);
+    inter8.pop(setInterval(plusp, 1000, 1000000 * up[7]));
     cobab = cobab * 1.2;
     if (cobab >= 1000){
       i[7] += 1;
@@ -332,7 +340,7 @@ function OnClick9(){
     kas[8] += 10000000;
     document.getElementById('p').innerHTML = Math.round(a);
     document.cookie = "name="+String(a);
-    inter9[id9++] = setInterval(plusp, 1000, 10000000 * up[8]);
+    inter9.pop(setInterval(plusp, 1000, 10000000 * up[8]));
     copri = copri * 1.2;
     if (copri >= 1000){
       i[8] += 1;
@@ -347,7 +355,10 @@ function OnClick9(){
 }
 function OnClick0(){
   if (a >= endgame){
-    document.body.style.display = 'none';
+    for (let o = 0; o < document.body.children.length; o++) {
+      document.body.children[o].style.display = 'none';
+    }
+    // document.body.style.display = 'none';
     console.log(document.body);
   }
 }
@@ -372,8 +383,8 @@ function OnClick12(){
     for(let ij=1; ij <= cur; ij++){
       clearInterval(inter2[ij]);
     }
-    var inter1 = undefined;
-    inter1 = setInterval(plusp, 10000, 1 * up[0] * cur);
+    var inter1 = [undefined];
+    inter1.pop(setInterval(plusp, 10000, 1 * up[0] * cur));
     if (cen[0] >= 1000){
       j[0] += 1;
       p[0] *= 1000;
@@ -395,8 +406,8 @@ function OnClick22(){
     for(let ij=1; ij <= bab; ij++){
       clearInterval(inter3[ij]);
     }
-    var inter2 = undefined;
-    inter2 = setInterval(plusp, 1000, 1 * up[1] * bab);
+    var inter2 = [undefined];
+    inter2.pop(setInterval(plusp, 1000, 1 * up[1] * bab));
     if (cen[1] >= 1000){
       j[1] += 1;
       p[1] *= 1000;
@@ -418,8 +429,8 @@ function OnClick32(){
     for(let ij=1; ij <= pri; ij++){
       clearInterval(inter4[ij]);
     }
-    var inter3 = undefined;
-    inter3 = setInterval(plusp, 1000, 10 * up[2] * pri);
+    var inter3 = [undefined];
+    inter3.pop(setInterval(plusp, 1000, 10 * up[2] * pri));
     if (cen[2] >= 1000){
       j[2] += 1;
       p[2] *= 1000;
@@ -441,8 +452,8 @@ function OnClick42(){
     for(let ij=1; ij <= bcur; ij++){
       clearInterval(inter5[ij]);
     }
-    var inter4 = undefined;
-    inter4 = setInterval(plusp, 1000, 100 * up[3] * bcur);
+    var inter4 = [undefined];
+    inter4.pop(setInterval(plusp, 1000, 100 * up[3] * bcur));
     if (cen[3] >= 1000){
       j[3] += 1;
       p[3] *= 1000;
@@ -464,8 +475,8 @@ function OnClick52(){
     for(let ij=1; ij <= bbab; ij++){
       clearInterval(inter6[ij]);
     }
-    var inter5 = undefined;
-    inter5 = setInterval(plusp, 1000, 1000 * up[4] * bbab);
+    var inter5 = [undefined];
+    inter5.pop(setInterval(plusp, 1000, 1000 * up[4] * bbab));
     if (cen[4] >= 1000){
       j[4] += 1;
       p[4] *= 1000;
@@ -487,8 +498,8 @@ function OnClick62(){
     for(let ij=1; ij <= bpri; ij++){
       clearInterval(inter7[ij]);
     }
-    var inter6 = undefined;
-    inter6 = setInterval(plusp, 1000, 10000 * up[5] * bpri);
+    var inter6 = [undefined];
+    inter6.pop(setInterval(plusp, 1000, 10000 * up[5] * bpri));
     if (cen[5] >= 1000){
       j[5] += 1;
       p[5] *= 1000;
@@ -510,8 +521,8 @@ function OnClick72(){
     for(let ij=1; ij <= ocur; ij++){
       clearInterval(inter8[ij]);
     }
-    var inter7 = undefined;
-    inter7 = setInterval(plusp, 1000, 100000 * up[6] * ocur);
+    var inter7 = [undefined];
+    inter7.pop(setInterval(plusp, 1000, 100000 * up[6] * ocur));
     if (cen[6] >= 1000){
       j[6] += 1;
       p[6] *= 1000;
@@ -533,8 +544,8 @@ function OnClick82(){
     for(let ij=1; ij <= obab; ij++){
       clearInterval(inter9[ij]);
     }
-    var inter8 = undefined;
-    inter8 = setInterval(plusp, 1000, 1000000 * up[7] * obab);
+    var inter8 = [undefined];
+    inter8.pop(setInterval(plusp, 1000, 1000000 * up[7] * obab));
     if (cen[7] >= 1000){
       j[7] += 1;
       p[7] *= 1000;
@@ -556,8 +567,8 @@ function OnClick92(){
     for(let ij=1; ij <= opri; ij++){
       clearInterval(inter1[ij]);
     }
-    var inter9 = undefined;
-    inter9 = setInterval(plusp, 1000, 10000000 * up[8] * opri);
+    var inter9 = [undefined];
+    inter9.pop(setInterval(plusp, 1000, 10000000 * up[8] * opri));
     if (cen[8] >= 1000){
       j[8] += 1;
       p[8] *= 1000;
