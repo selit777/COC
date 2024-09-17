@@ -40,15 +40,15 @@ if (getCookie('kol') != undefined){
   var inter7 = [setInterval(plusp, 1000,  100000 * up[7] * ocur)];
   var inter8 = [setInterval(plusp, 1000,  1000000 * up[8] * obab)];
   var inter1 = [setInterval(plusp, 10000,  1 * up[0] * opri)];
-  document.getElementByID('cur' ).title = cur ;
-  document.getElementByID('bab' ).title = bab ;
-  document.getElementByID('pri' ).title = pri ;
-  document.getElementByID('bcur').title = bcur;
-  document.getElementByID('bbab').title = bbab;
-  document.getElementByID('bpri').title = bpri;
-  document.getElementByID('ocur').title = ocur;
-  document.getElementByID('obab').title = obab;
-  document.getElementByID('opri').title = opri;
+  document.getElementById('cur' ).title = cur ;
+  document.getElementById('bab' ).title = bab ;
+  document.getElementById('pri' ).title = pri ;
+  document.getElementById('bcur').title = bcur;
+  document.getElementById('bbab').title = bbab;
+  document.getElementById('bpri').title = bpri;
+  document.getElementById('ocur').title = ocur;
+  document.getElementById('obab').title = obab;
+  document.getElementById('opri').title = opri;
   
 }else {
   var cur  = 0;
@@ -102,15 +102,15 @@ if (getCookie('cen') != undefined){
 }
 if (getCookie('kol2') != undefined){
   var col = [Number(getCookie('kol2').split(' ')[0]), Number(getCookie('kol2').split(' ')[1]), Number(getCookie('kol2').split(' ')[2]), Number(getCookie('kol2').split(' ')[3]), Number(getCookie('kol2').split(' ')[4]), Number(getCookie('kol2').split(' ')[5]), Number(getCookie('kol2').split(' ')[6]), Number(getCookie('kol2').split(' ')[7]), Number(getCookie('kol2').split(' ')[8])];
-  document.getElementByID('2cur' ).title = col[0];
-  document.getElementByID('2bab' ).title = col[1];
-  document.getElementByID('2pri' ).title = col[2];
-  document.getElementByID('2bcur').title = col[3];
-  document.getElementByID('2bbab').title = col[4];
-  document.getElementByID('2bpri').title = col[5];
-  document.getElementByID('2ocur').title = col[6];
-  document.getElementByID('2obab').title = col[7];
-  document.getElementByID('2opri').title = col[8];
+  document.getElementById('2cur' ).title = col[0];
+  document.getElementById('2bab' ).title = col[1];
+  document.getElementById('2pri' ).title = col[2];
+  document.getElementById('2bcur').title = col[3];
+  document.getElementById('2bbab').title = col[4];
+  document.getElementById('2bpri').title = col[5];
+  document.getElementById('2ocur').title = col[6];
+  document.getElementById('2obab').title = col[7];
+  document.getElementById('2opri').title = col[8];
 }else {
   var col  = [0, 0, 0, 0, 0, 0, 0, 0, 0];
 }
