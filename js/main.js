@@ -11,26 +11,26 @@ if (getCookie('name') != undefined){
   var a = 0;
 }
 if (getCookie('kas') != undefined){
-  var kas = [Number(getCookie('kas').split(' ')[0]), Number(getCookie('kas').split(' ')[1]), Number(getCookie('kas').split(' ')[2]), Number(getCookie('kas').split(' ')[3]), Number(getCookie('kas').split(' ')[4]), Number(getCookie('kas').split(' ')[5]), Number(getCookie('kas').split(' ')[6]), Number(getCookie('kas').split(' ')[7]), Number(getCookie('kas').split(' ')[8])];
+  var kas = [Number(getCookie('kas').split('.')[0]), Number(getCookie('kas').split('.')[1]), Number(getCookie('kas').split('.')[2]), Number(getCookie('kas').split('.')[3]), Number(getCookie('kas').split('.')[4]), Number(getCookie('kas').split('.')[5]), Number(getCookie('kas').split('.')[6]), Number(getCookie('kas').split('.')[7]), Number(getCookie('kas').split('.')[8])];
   document.getElementById('kas').innerHTML = String(kas.reduce(function(a, b){return a + b;}, 0).toFixed(1))+" K/C";
 }else {
   var kas = [0, 0, 0, 0, 0, 0, 0, 0, 0];
 }
 if (getCookie('up') != undefined){
-  var up = [Number(getCookie('up').split(' ')[0]), Number(getCookie('up').split(' ')[1]), Number(getCookie('up').split(' ')[2]), Number(getCookie('up').split(' ')[3]), Number(getCookie('up').split(' ')[4]), Number(getCookie('up').split(' ')[5]), Number(getCookie('up').split(' ')[6]), Number(getCookie('up').split(' ')[7]), Number(getCookie('up').split(' ')[8])];
+  var up = [Number(getCookie('up').split('.')[0]), Number(getCookie('up').split('.')[1]), Number(getCookie('up').split('.')[2]), Number(getCookie('up').split('.')[3]), Number(getCookie('up').split('.')[4]), Number(getCookie('up').split('.')[5]), Number(getCookie('up').split('.')[6]), Number(getCookie('up').split('.')[7]), Number(getCookie('up').split('.')[8])];
 }else {
   var up  = [1, 1, 1, 1, 1, 1, 1, 1, 1];
 }
 if (getCookie('kol') != undefined){
-  var cur  = Number(getCookie('kol').split(' ')[0]);
-  var bab  = Number(getCookie('kol').split(' ')[1]);
-  var pri  = Number(getCookie('kol').split(' ')[2]);
-  var bcur = Number(getCookie('kol').split(' ')[3]);
-  var bbab = Number(getCookie('kol').split(' ')[4]);
-  var bpri = Number(getCookie('kol').split(' ')[5]);
-  var ocur = Number(getCookie('kol').split(' ')[6]);
-  var obab = Number(getCookie('kol').split(' ')[7]);
-  var opri = Number(getCookie('kol').split(' ')[8]);
+  var cur  = Number(getCookie('kol').split('.')[0]);
+  var bab  = Number(getCookie('kol').split('.')[1]);
+  var pri  = Number(getCookie('kol').split('.')[2]);
+  var bcur = Number(getCookie('kol').split('.')[3]);
+  var bbab = Number(getCookie('kol').split('.')[4]);
+  var bpri = Number(getCookie('kol').split('.')[5]);
+  var ocur = Number(getCookie('kol').split('.')[6]);
+  var obab = Number(getCookie('kol').split('.')[7]);
+  var opri = Number(getCookie('kol').split('.')[8]);
   var inter9 = [setInterval(plusp, 1000, 10000000 * up[1] * cur)];
   var inter2 = [setInterval(plusp, 1000,  1 * up[2] * bab)];
   var inter3 = [setInterval(plusp, 1000,  10 * up[3] * pri)];
@@ -71,15 +71,15 @@ if (getCookie('kol') != undefined){
   var inter9 = [undefined];
 }
 if (getCookie('cen') != undefined){
-  var ccur  = Number(getCookie('cen').split(' ')[0]);
-  var cbab  = Number(getCookie('cen').split(' ')[1]);
-  var cpri  = Number(getCookie('cen').split(' ')[2]);
-  var cbcur = Number(getCookie('cen').split(' ')[3]);
-  var cbbab = Number(getCookie('cen').split(' ')[4]);
-  var cbpri = Number(getCookie('cen').split(' ')[5]);
-  var cocur = Number(getCookie('cen').split(' ')[6]);
-  var cobab = Number(getCookie('cen').split(' ')[7]);
-  var copri = Number(getCookie('cen').split(' ')[8]);
+  var ccur  = Number(getCookie('cen').split('.')[0]);
+  var cbab  = Number(getCookie('cen').split('.')[1]);
+  var cpri  = Number(getCookie('cen').split('.')[2]);
+  var cbcur = Number(getCookie('cen').split('.')[3]);
+  var cbbab = Number(getCookie('cen').split('.')[4]);
+  var cbpri = Number(getCookie('cen').split('.')[5]);
+  var cocur = Number(getCookie('cen').split('.')[6]);
+  var cobab = Number(getCookie('cen').split('.')[7]);
+  var copri = Number(getCookie('cen').split('.')[8]);
   document.getElementById('ccur').innerHTML = ccur;
   document.getElementById('cbab').innerHTML = cbab;
   document.getElementById('cpri').innerHTML = cpri;
@@ -92,16 +92,16 @@ if (getCookie('cen') != undefined){
 }else {
   var ccur  = 10;
   var cbab  = 100;
-  var cpri  = 1000;
-  var cbcur = 10000;
-  var cbbab = 100000;
-  var cbpri = 1000000;
-  var cocur = 10000000;
-  var cobab = 100000000;
-  var copri = 1000000000;
+  var cpri  = 1;
+  var cbcur = 10;
+  var cbbab = 100;
+  var cbpri = 1;
+  var cocur = 10;
+  var cobab = 100;
+  var copri = 1;
 }
 if (getCookie('kol2') != undefined){
-  var col = [Number(getCookie('kol2').split(' ')[0]), Number(getCookie('kol2').split(' ')[1]), Number(getCookie('kol2').split(' ')[2]), Number(getCookie('kol2').split(' ')[3]), Number(getCookie('kol2').split(' ')[4]), Number(getCookie('kol2').split(' ')[5]), Number(getCookie('kol2').split(' ')[6]), Number(getCookie('kol2').split(' ')[7]), Number(getCookie('kol2').split(' ')[8])];
+  var col = [Number(getCookie('kol2').split('.')[0]), Number(getCookie('kol2').split('.')[1]), Number(getCookie('kol2').split('.')[2]), Number(getCookie('kol2').split('.')[3]), Number(getCookie('kol2').split('.')[4]), Number(getCookie('kol2').split('.')[5]), Number(getCookie('kol2').split('.')[6]), Number(getCookie('kol2').split('.')[7]), Number(getCookie('kol2').split('.')[8])];
   document.getElementById('2cur' ).title = col[0];
   document.getElementById('2bab' ).title = col[1];
   document.getElementById('2pri' ).title = col[2];
@@ -115,7 +115,7 @@ if (getCookie('kol2') != undefined){
   var col  = [0, 0, 0, 0, 0, 0, 0, 0, 0];
 }
 if (getCookie('cen2') != undefined){
-  var cen = [Number(getCookie('cen2').split(' ')[0]), Number(getCookie('cen2').split(' ')[1]), Number(getCookie('cen2').split(' ')[2]), Number(getCookie('cen2').split(' ')[3]), Number(getCookie('cen2').split(' ')[4]), Number(getCookie('cen2').split(' ')[5]), Number(getCookie('cen2').split(' ')[6]), Number(getCookie('cen2').split(' ')[7]), Number(getCookie('cen2').split(' ')[8])];
+  var cen = [Number(getCookie('cen2').split('.')[0]), Number(getCookie('cen2').split('.')[1]), Number(getCookie('cen2').split('.')[2]), Number(getCookie('cen2').split('.')[3]), Number(getCookie('cen2').split('.')[4]), Number(getCookie('cen2').split('.')[5]), Number(getCookie('cen2').split('.')[6]), Number(getCookie('cen2').split('.')[7]), Number(getCookie('cen2').split('.')[8])];
   document.getElementById('2ccur').innerHTML = cen[0];
   document.getElementById('2cbab').innerHTML = cen[1];
   document.getElementById('2cpri').innerHTML = cen[2];
@@ -128,13 +128,27 @@ if (getCookie('cen2') != undefined){
 }else {
   var cen  = [1, 5, 10, 50, 100, 1, 5, 10, 50];
 }
+if (getCookie('k') != undefined){
+  var k = [Number(getCookie('k').split('.')[0]),Number(getCookie('k').split('.')[1]),Number(getCookie('k').split('.')[2]),Number(getCookie('k').split('.')[3]),Number(getCookie('k').split('.')[4]),Number(getCookie('k').split('.')[5]),Number(getCookie('k').split('.')[6]),Number(getCookie('k').split('.')[7]),Number(getCookie('k').split('.')[8])];
+}else{
+  var k = [1, 1, 1000, 1000, 1000, 1000000, 1000000, 1000000, 1000000];
+// var p = [1000, 1000, 1000, 1000, 1000, 1000000, 1000000, 1000000, 1000000];
+}
+if (getCookie('p') != undefined){
+  var p = [Number(getCookie('p').split('.')[0]),Number(getCookie('p').split('.')[1]),Number(getCookie('p').split('.')[2]),Number(getCookie('p').split('.')[3]),Number(getCookie('p').split('.')[4]),Number(getCookie('p').split('.')[5]),Number(getCookie('p').split('.')[6]),Number(getCookie('p').split('.')[7]),Number(getCookie('p').split('.')[8])];
+}else{
+  // var k = [1, 1, 1000, 1000, 1000, 1000000, 1000000, 1000000, 1000000];
+  var p = [1000, 1000, 1000, 1000, 1000, 1000000, 1000000, 1000000, 1000000];
+}
 function Sum(kas) {
-  document.cookie = "kas="+kas[0]+" "+kas[1]+" "+kas[2]+" "+kas[3]+" "+kas[4]+" "+kas[5]+" "+kas[6]+" "+kas[7]+" "+kas[8];
-  document.cookie = "up="+up[0]+" "+up[1]+" "+up[2]+" "+up[3]+" "+up[4]+" "+up[5]+" "+up[6]+" "+up[7]+" "+up[8];
-  document.cookie = "kol="+cur+" "+bab+" "+pri+" "+bcur+" "+bbab+" "+bpri+" "+ocur+" "+obab+" "+opri;
-  document.cookie = "cen="+ccur+" "+cbab+" "+cpri+" "+cbcur+" "+cbbab+" "+cbpri+" "+cocur+" "+cobab+" "+copri;
-  document.cookie = "kol2="+col[0]+" "+col[1]+" "+col[2]+" "+col[3]+" "+col[4]+" "+col[5]+" "+col[6]+" "+col[7]+" "+col[8];
-  document.cookie = "cen2="+cen[0]+" "+cen[1]+" "+cen[2]+" "+cen[3]+" "+cen[4]+" "+cen[5]+" "+cen[6]+" "+cen[7]+" "+cen[8];
+  document.cookie = "kas="+kas[0]+"."+kas[1]+"."+kas[2]+"."+kas[3]+"."+kas[4]+"."+kas[5]+"."+kas[6]+"."+kas[7]+"."+kas[8];
+  document.cookie = "up="+up[0]+"."+up[1]+"."+up[2]+"."+up[3]+"."+up[4]+"."+up[5]+"."+up[6]+"."+up[7]+"."+up[8];
+  document.cookie = "kol="+cur+"."+bab+"."+pri+"."+bcur+"."+bbab+"."+bpri+"."+ocur+"."+obab+"."+opri;
+  document.cookie = "cen="+ccur+"."+cbab+"."+cpri+"."+cbcur+"."+cbbab+"."+cbpri+"."+cocur+"."+cobab+"."+copri;
+  document.cookie = "kol2="+col[0]+"."+col[1]+"."+col[2]+"."+col[3]+"."+col[4]+"."+col[5]+"."+col[6]+"."+col[7]+"."+col[8];
+  document.cookie = "cen2="+cen[0]+"."+cen[1]+"."+cen[2]+"."+cen[3]+"."+cen[4]+"."+cen[5]+"."+cen[6]+"."+cen[7]+"."+cen[8];
+  document.cookie = "k="+k[0]+"."+k[1]+"."+k[2]+"."+k[3]+"."+k[4]+"."+k[5]+"."+k[6]+"."+k[7]+"."+k[8];
+  document.cookie = "p="+p[0]+"."+p[1]+"."+p[2]+"."+p[3]+"."+p[4]+"."+p[5]+"."+p[6]+"."+p[7]+"."+p[8];
   return String(kas.reduce(function(a, b){return a + b;}, 0).toFixed(1))+" K/C";
 }
 
@@ -144,7 +158,7 @@ var endgame = 1000000000;
 
 var i = [0, 0, 1, 1, 1, 2, 2, 2, 2, 0];
 var j = [0, 0, 0, 0, 0, 1, 1, 1, 1];
-var k = [1000, 1000, 1000000, 1000000, 1000000, 1000000000, 1000000000, 1000000000, 1000000000];
+var k = [1, 1, 1000, 1000, 1000, 1000000, 1000000, 1000000, 1000000];
 var p = [1000, 1000, 1000, 1000, 1000, 1000000, 1000000, 1000000, 1000000];
 var arr = ['','k','m','b','t','q'];
 var ar = ['k', 'm', 'b', 't', 'q'];
@@ -171,8 +185,8 @@ function plusp(b){
 }
 
 function OnClick1(){
-  if (a >= Math.floor(ccur*(k[0]/1000))){
-    a -= Math.floor(ccur*(k[0]/1000));
+  if (a >= Math.floor(ccur*k[0])){
+    a -= Math.floor(ccur*k[0]);
     cur += 1;
     kas[0] += 0.1;
     document.getElementById('p').innerHTML = Math.round(a);
@@ -195,8 +209,8 @@ function OnClick1(){
   }
 }
 function OnClick2(){
-  if (a >= Math.floor(cbab*(k[1]/1000))){
-    a -= Math.floor(cbab*(k[1]/1000));
+  if (a >= Math.floor(cbab*k[1])){
+    a -= Math.floor(cbab*k[1]);
     bab += 1;
     kas[1] += 1;
     document.getElementById('p').innerHTML = Math.round(a);
@@ -218,8 +232,8 @@ function OnClick2(){
   }
 }
 function OnClick3(){
-  if (a >= Math.floor(cpri*(k[2]/1000))){
-    a -= Math.floor(cpri*(k[2]/1000));
+  if (a >= Math.floor(cpri*k[2])){
+    a -= Math.floor(cpri*k[2]);
     pri += 1;
     kas[2] += 10;
     document.getElementById('p').innerHTML = Math.round(a);
@@ -238,8 +252,8 @@ function OnClick3(){
   }
 }
 function OnClick4(){
-  if (a >= Math.floor(cbcur*(k[3]/1000))){
-    a -= Math.floor(cbcur*(k[3]/1000));
+  if (a >= Math.floor(cbcur*k[3])){
+    a -= Math.floor(cbcur*k[3]);
     bcur += 1;
     kas[3] += 100;
     document.getElementById('p').innerHTML = Math.round(a);
@@ -257,8 +271,8 @@ function OnClick4(){
   }
 }
 function OnClick5(){
-  if (a >= Math.floor(cbbab*(k[4]/1000))){
-    a -= Math.floor(cbbab*(k[4]/1000));
+  if (a >= Math.floor(cbbab*k[4])){
+    a -= Math.floor(cbbab*k[4]);
     bbab += 1;
     kas[4] += 1000;
     document.getElementById('p').innerHTML = Math.round(a);
@@ -276,8 +290,8 @@ function OnClick5(){
   }
 }
 function OnClick6(){
-  if (a >= Math.floor(cbpri*(k[5]/1000))){
-    a -= Math.floor(cbpri*(k[5]/1000));
+  if (a >= Math.floor(cbpri*k[5])){
+    a -= Math.floor(cbpri*k[5]);
     bpri += 1;
     kas[5] += 10000;
     document.getElementById('p').innerHTML = Math.round(a);
@@ -296,8 +310,8 @@ function OnClick6(){
   }
 }
 function OnClick7(){
-  if (a >= Math.floor(cocur*(k[6]/1000))){
-    a -= Math.floor(cocur*(k[6]/1000));
+  if (a >= Math.floor(cocur*k[6])){
+    a -= Math.floor(cocur*k[6]);
     ocur += 1;
     kas[6] += 100000;
     document.getElementById('p').innerHTML = Math.round(a);
@@ -315,8 +329,8 @@ function OnClick7(){
   }
 }
 function OnClick8(){
-  if (a >= Math.floor(cobab*(k[7]/1000))){
-    a -= Math.floor(cobab*(k[7]/1000));
+  if (a >= Math.floor(cobab*k[7])){
+    a -= Math.floor(cobab*k[7]);
     obab += 1;
     kas[7] += 1000000;
     document.getElementById('p').innerHTML = Math.round(a);
@@ -334,8 +348,8 @@ function OnClick8(){
   }
 }
 function OnClick9(){
-  if (a >= Math.floor(copri*(k[8]/1000))){
-    a -= Math.floor(copri*(k[8]/1000));
+  if (a >= Math.floor(copri*k[8])){
+    a -= Math.floor(copri*k[8]);
     opri += 1;
     kas[8] += 10000000;
     document.getElementById('p').innerHTML = Math.round(a);
