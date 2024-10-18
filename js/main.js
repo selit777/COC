@@ -367,16 +367,6 @@ function OnClick9(){
     // if (cpri > 1000000)
   }
 }
-function OnClick0(){
-  if (a >= endgame){
-    for (let o = 0; o < document.body.children.length; o++) {
-      document.body.children[o].style.display = 'none';
-    }
-    // document.body.style.display = 'none';
-    console.log(document.body);
-  }
-}
-
 function Upgrates(){
   document.getElementById("autoclicker").style.display = 'none';
   document.getElementById("upgrates").style.display = 'inline-block';
