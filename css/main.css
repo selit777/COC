@@ -151,12 +151,14 @@ ol li{
   font-size: 250%;
   margin-top: 7.5px;
   float: left;
+  min-width: 123px;
 }
 
 .num {
   font-size: 250%;
   margin-top: 7.5px;
   float: right;
+  min-width: 72px;
 }
 #endgame{
   width: 30%;
