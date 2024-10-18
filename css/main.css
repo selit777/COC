@@ -114,6 +114,7 @@ body {
   position: absolute;
 }
 .li{
+  min-width: 257px;
   width: 125%;
   height: 80px;
   display: block;
