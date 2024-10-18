@@ -140,6 +140,7 @@ body {
 }
 ol {
   list-style: none;
+  min-width: 257px;
 }
 ol li{
   font-family: "Oswald", sans-serif;
