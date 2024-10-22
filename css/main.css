@@ -72,7 +72,7 @@ body {
   width: 500px;
   height: 500px;
   border: none;
-  background-image: url(Clicker of cat/CatNormal.png);
+  background-image: url(PNGs/CatNormal.png);
   background-size: cover;
   float: left;
 }
@@ -82,7 +82,7 @@ body {
 #main button:active{
   width: 500px;
   height: 500px;
-  background-image: url(Clicker of cat/CatClicked.png);
+  background-image: url(PNGs/CatClicked.png);
   background-size: cover;
 }
 #p, #kas {
@@ -111,7 +111,6 @@ body {
 #aside ul {
   list-style: none;
   display: inline-block;
-  float: left;
   width: 50%;
   margin-bottom: 50px;
   margin-top: 25px;
