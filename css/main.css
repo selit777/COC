@@ -68,21 +68,21 @@ body {
   background-color: white;
   float: left;
 }
-#main button {
+#main button img{
   width: 500px;
   height: 500px;
   border: none;
-  background-image: url(PNGs/CatNormal.png);
+  background-image: url("PNGs/CatNormal.png");
   background-size: cover;
   float: left;
 }
-#main button:hover{
+#main button img:hover{
   cursor: pointer;
 }
-#main button:active{
+#main button img:active{
   width: 500px;
   height: 500px;
-  background-image: url(PNGs/CatClicked.png);
+  background-image: url("PNGs/CatClicked.png");
   background-size: cover;
 }
 #p, #kas {
