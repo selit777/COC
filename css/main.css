@@ -72,7 +72,7 @@ body {
   width: 500px;
   height: 500px;
   border: none;
-  background-image: url("PNGs/CatNormal.png");
+  background-image: url("../PNGs/CatNormal.png");
   background-size: cover;
   float: left;
 }
@@ -82,7 +82,7 @@ body {
 #main button img:active{
   width: 500px;
   height: 500px;
-  background-image: url("PNGs/CatClicked.png");
+  background-image: url("../PNGs/CatClicked.png");
   background-size: cover;
 }
 #p, #kas {
