@@ -72,7 +72,7 @@ body {
   width: 500px;
   height: 500px;
   border: none;
-  background-image: url(https://avatars.mds.yandex.net/i?id=cf00a4c05010f9f76bb407b54d2cdcc451df639b-13223322-images-thumbs&n=13);
+  background-image: url(Clicker of cat/CatNormal.png);
   background-size: cover;
   float: left;
 }
@@ -82,7 +82,7 @@ body {
 #main button:active{
   width: 500px;
   height: 500px;
-  background-image: url(https://i.pinimg.com/736x/8f/d6/f0/8fd6f0979a12c19d0dd54c10a82eacaa.jpg);
+  background-image: url(Clicker of cat/CatClicked.png);
   background-size: cover;
 }
 #p, #kas {
