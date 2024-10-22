@@ -95,13 +95,14 @@ body {
   margin-top: 80px;
 }
 #aside {
-  width: 496px;
-  height: 1vh;
-  color: #123456;
-  margin-left: 70%;
-  background: #ffdc5e;
-  border: 1px solid #e5b400;
-  position: absolute;
+    width: 25vw;
+    height: 99.8vh;
+    min-height: 870px;
+    color: #123456;
+    margin-left: 74.9vw;
+    background: #ffdc5e;
+    border: 1px solid #e5b400;
+    position: absolute
 }
 
 #aside ul {
